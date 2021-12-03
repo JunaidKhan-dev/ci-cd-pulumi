@@ -9,6 +9,7 @@ const examplebucketObject = new aws.s3.BucketObject("bg-image", {
   key: "bg-image-1",
   bucket: bucket.id,
   source: new pulumi.asset.FileAsset("images/Image.png"),
+  acl: "public-read",
 })
 
 // Export the name of the bucket
